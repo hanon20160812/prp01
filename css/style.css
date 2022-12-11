@@ -1,0 +1,655 @@
+/* 左右搖擺 */
+@keyframes swing {
+    15% {
+        transform: translateX(5px);
+    }
+
+    40% {
+        transform: translateX(-5px);
+    }
+
+    65% {
+        transform: translateX(2px);
+    }
+
+    85% {
+        transform: translateX(-2px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+html {
+    box-sizing: border-box;
+
+    /* 使超連結滑動 */
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    /*文字左右對齊*/
+    font-family: 'PTSans', Arial, sans-serif;
+    text-align: justify;
+
+
+    margin: 0;
+    padding: 0;
+
+    /*游標，一定要加逗號後的宣告*/
+    cursor: url('../img/nat967.cur'), auto;
+
+    background-color: rgb(255, 255, 255);
+
+}
+
+
+
+
+/* 大區域 */
+.container {
+    background-color: rgb(255, 255, 255);
+
+    /*置中*/
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+/* 封面 */
+.banner {
+    display: block;
+    margin-bottom: 20px;
+
+
+    height: 52vw;
+    background-image: url(../img/banner.png);
+    background-size: cover;
+    background-color: #fff;
+    background-repeat: no-repeat;
+
+}
+
+
+
+/* 選單 */
+.nav {
+    /* margin-top: 20px; */
+}
+
+
+.nav-ul {
+    /* 自由排列 */
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0;
+    padding: 0;
+
+
+}
+
+
+.nav-ul-li {
+    /* 取消清單樣式 */
+    list-style: none;
+    width: calc(100%/6);
+
+    height: 10px;
+
+
+}
+
+
+.nav-ul-li-a {
+    display: block;
+
+    color: #fff;
+    text-decoration: none;
+
+    padding: 15px 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-bottom: 0px solid #ff7878;
+
+}
+
+
+.nav-ul-li-a:hover {
+    color: #f1a4b1;
+    padding-right: 1px;
+    border-bottom: 1px solid #ff7878;
+    transform: translateY(5px);
+    transition: all .2s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 內文 */
+
+.sticker-div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+
+    border-bottom: 2px dotted #f1a4b1;
+}
+
+.sticker-left {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+    /* background-color: rgb(251, 217, 95); */
+
+
+}
+
+.sticker-right {
+    width: 50%;
+    /* background-color: bisque; */
+}
+
+
+
+
+
+/* 左邊大貼圖 */
+.sticker-left img {
+    display: block;
+    margin: auto;
+    width: 85%;
+
+}
+
+
+
+
+
+
+/* 說明文+購買 */
+.sticker-t {
+    display: flex;
+
+}
+
+.sticker-money {
+    width: 75%;
+    /* background-color: rgb(176, 255, 154) */
+}
+
+.sticker-buy {
+    width: 25%;
+    /* background-color: rgb(158, 226, 250); */
+}
+
+
+
+
+
+
+
+
+
+/* 貼圖文字區 */
+.sticker-title {}
+
+.sticker-title h1 {
+    color: #ff6f88;
+}
+
+.sticker-t {}
+
+.sticker-introduce {
+    line: height 0.5;
+}
+
+.sticker-introduce p {}
+
+.sticker-money h2 {
+    display: block;
+    color: rgb(0, 170, 59);
+
+}
+
+.sticker-buy {
+    display: block;
+    margin: auto;
+}
+
+
+.sticker-buy img {
+    display: block;
+    margin: auto;
+    width: 50px;
+}
+
+.sticker-buy img:hover {
+
+    /* 讓元素左右搖擺 */
+    animation: swing 1s 1;
+}
+
+
+
+
+/* 貼圖展示區 */
+.sticker-box {
+
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+
+    /* background-color: rgb(209, 176, 153); */
+}
+
+.sticker-img {
+    margin: 15px auto;
+    width: 30%;
+
+}
+
+.sticker-img img {
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+/* 商品頁面設定 */
+.box {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.article {
+    width: 80%;
+
+}
+
+.aside {
+    width: 20%;
+    border-right: 2px dotted #f1a4b1;
+    padding-top: 50px;
+
+
+}
+
+
+.up {
+    position: fixed;
+    right: 0;
+    top: 90%;
+    width: 4em;
+    margin-top: -2.5em;
+    z-index: 11111;
+}
+
+
+
+
+/* 選單MENU */
+.menu {}
+
+.menu-nav {}
+
+.menu-nav-ul {}
+
+.menu-nav-ul-li {
+    list-style-type: square;
+    color: #ff7878;
+}
+
+.menu-nav-ul-li-a {
+    display: block;
+
+    text-decoration: none;
+    color: #030303;
+    padding: 15px 0;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.menu-nav-ul-li-a:hover {
+    padding-right: 1px;
+    color: #ffa5a5;
+    transition: all .2s;
+
+}
+
+
+
+/* 商品展示區 */
+.commodity-sticker-img {
+    margin: 15px;
+    width: 20vw;
+    height: 20vw;
+
+    /* 隱藏在圖片放大時超出的部分 */
+    overflow: hidden;
+
+
+}
+
+.commodity-sticker-img img {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    transform: scale(1, 1);
+    transition: all .5s;
+}
+
+.commodity-sticker-img img:hover {
+    transform: scale(1.8, 1.8);
+}
+
+/* 商品販賣處 */
+
+.commodity-div {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+
+    border-bottom: 2px dotted #f1a4b1;
+}
+
+.store-left {
+    display: block;
+    margin: auto;
+    padding: 10px;
+
+    width: 50%;
+}
+
+
+.store-right {
+    width: 50%;
+
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.commodity-title {
+    width: 50%;
+}
+
+.commodity-t {
+    width: 50%;
+}
+
+
+
+
+.store-left img {
+    display: block;
+    margin: auto;
+    width: 500px;
+}
+
+
+
+.commodity-title b {
+    color: rgb(141, 141, 141);
+}
+
+
+
+
+.commodity-t {}
+
+
+
+
+
+
+.store_price {}
+
+.special_offer {
+    text-decoration: line-through;
+
+    /* 字距 */
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: #545454;
+}
+
+.commodity-nt {
+    /* background-color: rgb(148, 148, 241); */
+}
+
+.commodity-nt {
+    font-weight: bold;
+    color: #fa1f1f;
+}
+
+.commodity-money {
+    /* background-color: rgb(165, 243, 243); */
+}
+
+.commodity-money-nuber {
+    font-size: 50px;
+    line-height: 0px;
+
+    /* 字距 */
+    letter-spacing: 3px;
+
+    font-weight: bold;
+    color: #fa1f1f;
+}
+
+
+
+
+.purchase_details {}
+
+
+.commodity-color {
+    display: flex;
+
+}
+
+.commodity-color-c {
+
+    height: 30px;
+    width: 30px;
+
+    padding: 5px;
+    margin: 10px;
+
+}
+
+.commodity-size {
+    display: flex;
+
+}
+
+.commodity-size-s {
+    height: 30px;
+    width: 50px;
+
+    display: flex;
+    /* 水平置中 */
+    justify-content: center;
+    /* 垂直置中 */
+    align-items: center;
+
+    margin: 10px;
+    background-color: rgb(226, 226, 226);
+
+}
+
+.commodity-size-s a {
+    text-decoration: none;
+    display: block;
+
+
+    font-size: small;
+    color: #030303;
+}
+
+
+
+/* 商品下單區 */
+
+.buy {
+    display: flex;
+
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.quantity {
+    margin: 20px 10px;
+
+}
+
+.quantity_t{
+    margin: 20px;
+}
+
+
+
+.cart {
+    margin: 20px;
+   
+}
+
+.cart a {
+    
+    display: block;
+
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+
+
+ 
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #538490;
+}
+
+
+
+
+
+
+
+/* 作品展示區 */
+.work-sticker-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 15px;
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+
+    /* border: 1px solid #ff6f88; */
+
+    /* 隱藏在圖片放大時超出的部分 */
+    overflow: hidden;
+
+
+}
+
+.work-sticker-img img {
+    height: 100%;
+    display: block;
+    margin: auto;
+
+
+
+    transform: scale(1, 1);
+    transition: all .5s;
+}
+
+.work-sticker-img img:hover {
+    transform: scale(1.8, 1.8);
+}
+
+
+
+.work-sticker-img2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 15px;
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+
+    /* border: 1px solid #ff6f88; */
+
+    /* 隱藏在圖片放大時超出的部分 */
+    overflow: hidden;
+}
+
+.work-sticker-img2 img {
+    width: 100%;
+    display: block;
+    margin: auto;
+
+    transform: scale(1, 1);
+    transition: all .5s;
+}
+
+.work-sticker-img2 img:hover {
+    transform: scale(1.8, 1.8);
+}
+
+
+
+.movie-box {
+    padding: 10px;
+}
+
+
+
+
+
+
+footer {
+    /* background-color: rgb(103, 147, 151); */
+    color: rgb(207, 207, 207);
+    font-size: small;
+    text-align: center;
+    padding: 15px 0;
+}
